@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make all",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "make all"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "make debug",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "make debug"
+            ]
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "make clean"
+            ]
+        },
+        {
+            "label": "make distclean",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "make distclean"
+            ]
+        },
+        {
+            "label": "bison generate",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "cd src && bison -l -d logic_expr.y"
+            ]
+        },
+        {
+            "label": "flex generate",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "cd src && flex --noline -o logic_expr.yy.c logic_expr.l"
+            ]
+        },
+        {
+            "label": "bison flex generate",
+            "dependsOn": [
+                "bison generate",
+                "flex generate"
+            ]
+        }
+    ]
+}

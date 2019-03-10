@@ -1,0 +1,54 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "stopAtEntry": false,
+            "args": [
+                "<io/in",
+                ">io/out",
+                "2>io/err"
+            ],
+            "program": "debug/main",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Add src to source directories",
+                    "text": "directory src",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "make debug",
+            "linux": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "cwd": ".",
+                "pipeTransport": {
+                    "debuggerPath": "/usr/bin/gdb",
+                    "pipeProgram": "${env:windir}\\sysnative\\bash.exe",
+                    "pipeArgs": [
+                        "-c"
+                    ],
+                    "pipeCwd": "${workspaceFolder}"
+                },
+                "sourceFileMap": {
+                    "/mnt/c": "C:\\",
+                    "/": "C:\\Users\\cheng\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\\LocalState\\rootfs\\"
+                }
+            }
+        }
+    ]
+}

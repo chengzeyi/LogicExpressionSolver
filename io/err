@@ -1,0 +1,18 @@
+Line 12, Char 1: invalid character 'a'
+Line 12, Char 2: invalid character 'a'
+Line 12, Char 3: invalid character 'a'
+Line 13, Char 6: invalid character 'a'
+Line 14, Char 1: invalid character 'x'
+Line 14, Char 2: invalid character 'y'
+Line 14, Char 3: invalid character 'z'
+Line 14, Char 5: syntax error, unexpected T_OR
+Line 15, Char 3: invalid character '='
+Line 17, Char 1: syntax error, unexpected T_LT
+Line 17, Char 5: invalid character '='
+Line 23, Char 1: invalid character '-'
+Line 23, Char 2: invalid character 'x'
+Line 23, Char 4: syntax error, unexpected T_EQ
+Line 23, Char 7: invalid character 'x'
+Line 26, Char 2: invalid character '*'
+Line 26, Char 3: syntax error, unexpected T_RP, expecting T_INTEGER or T_LP or T_NOT
+Line 27, Char 10: syntax error, unexpected T_AND, expecting T_INTEGER or T_LP or T_NOT
